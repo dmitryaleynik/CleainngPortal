@@ -1,0 +1,13 @@
+.header {
+    background-color: darkgray;
+    justify-content: flex-end !important;
+}
+
+.headerBtn {
+    margin: 10px 10px 10px 10px;
+    color: black;
+}
+
+.nav-link{
+    color:black;
+}
