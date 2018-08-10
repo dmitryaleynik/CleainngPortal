@@ -14,10 +14,16 @@ class SignIn extends React.Component {
         return (
             <div className="form-container">
                 <h2>Sign In</h2>
-                <SignInForm/>
+                <SignInForm handleSubmit={this.handleSubmit}/>
             </div>
 
         )
+    }
+
+    handleSubmit = (email, password) => {
+        (email + ' ' + password);
+        (this.props.authorize);
+        this.props.authorize(email, password);    
     }
 }
 

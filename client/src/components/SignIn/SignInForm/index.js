@@ -34,10 +34,16 @@ class SignInForm extends React.Component {
                 </div>
 
                 <div className="form-group">
-                    <button disabled={!this.state.formValid} className="btn btn-primary" type="submit"> Sign In</button>
+                    <button disabled={!this.state.formValid} onClick={this.handleSubmit} className="btn btn-primary" > Sign In</button>
                 </div>
             </form>
         )
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const {email, password} = this.state;
+        this.props.handleSubmit(email, password);
     }
 
     handleInput = (e) => {
