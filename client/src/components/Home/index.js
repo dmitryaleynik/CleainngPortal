@@ -9,14 +9,7 @@ class Home extends React.Component {
     
     render() {
         return(
-            <form>
-                <input>
-                </input>
-                <input>
-                </input>
-                <button>Ok</button>
-            </form>
-
+            <div>Home page</div>
         )
     }
 }
