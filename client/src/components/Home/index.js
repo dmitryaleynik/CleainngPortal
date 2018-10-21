@@ -1,19 +1,18 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as securityActions from '../../actions/securityActions';
+import Home from './page.js';
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
+const mapStateToProps = state => ({
+  security: state.security,
+});
 
-    }
-    
-    render() {
-        return(
-            <div>Home page</div>
-        )
-    }
-}
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(securityActions, dispatch),
+})
 
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(
+  Home,
+);
 
 
